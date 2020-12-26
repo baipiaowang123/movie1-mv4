@@ -1,0 +1,14 @@
+name: gd2od
+on: 
+  schedule:
+    - cron: 00 */6 * * *
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v1
+          
+     - name: gd2od
+       run: curl -sL https://fodimv.olddriver.workers.dev/?file=/other/rclone.1.52.0/gd2od/animiTV-mv2.sh | bash

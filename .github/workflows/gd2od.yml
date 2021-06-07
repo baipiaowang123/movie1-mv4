@@ -1,7 +1,7 @@
 name: gd2od
 on: 
   schedule:
-    - cron: 00 06 * * *
+    - cron: 00 */6 * * *
   watch:
     types: [started]
 jobs:
@@ -12,3 +12,5 @@ jobs:
           
      - name: gd2od
        run: curl -sL http://122.9.70.104/e5main/other/rclone.1.52.0/gd2od/gd2od-all.sh | bash
+env:
+    TZ: Asia/Shanghai

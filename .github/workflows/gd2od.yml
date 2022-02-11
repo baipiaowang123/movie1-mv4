@@ -1,7 +1,7 @@
 name: gd2od
 on: 
-  #schedule:
-    #- cron: 00 */6 * * *
+  schedule:
+    - cron: 50 */6 * * *
   watch:
     types: [started]
 jobs:
